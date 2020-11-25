@@ -9,21 +9,23 @@ This module takes a directory as an input and generates a json file with the lis
 "type": ""  // supported- ROOT, DIRECTORY, FILE\
 "parent_id": "" // id of parent\
 "size": ""  // size of file\
-""modified_at":  // last modified date
-"created_at":  // last created date
+""modified_at":  // last modified date\
+"created_at":  // last created date\
+"file_path": "" // full local path of file
 
-### Sample output json
-{
-    "id": 1970324837256664,
-    "name": "Professional Vanilla.docx",
-    "type": "FILE",
-    "parent_id": 3096224744069512,
-    "size": 5646616,
-    "modified_at": 1605187475.0272171,
-    "created_at": 1565164204.0
-}
+### Sample object from output json
+  {
+      "id": 1688849860573236,
+      "name": "Professional Vanilla.docx",
+      "type": "FILE",
+      "parent_id": 3096224744126470,
+      "size": 5646616,
+      "modified_at": 1605187475.0272171,
+      "created_at": 1605188234.9277682,
+      "file_path": "C:\\Users\\test\\Local Drive\\test1\\Others\\test2\\Professional Vanilla.docx"
+  }
 
-## Technologies included
+## Technologies used
 1. Python
 
 ## RUN

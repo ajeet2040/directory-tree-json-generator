@@ -13,10 +13,10 @@ parser.add_argument('--output_json_path',"-o", default='result.json', help='Outp
 # 0. Add additional file data as required -- Completed
 # 1. Add exception handling -- Completed
 # 2. Add documentation -- Completed
-# 3. Code refactoring as applicable - naming conventions, modularity etc.
-# 4. Add logs , print statments
+# 3. Code refactoring as applicable - naming conventions, modularity etc. -- Completed
+# 4. Add logs , print statments -- Completed
 # 5. Add usage message and run parameters -- Completed
-# 6. Update Readme as applicable
+# 6. Update Readme as applicable -- Completed
 # 7. Next Version - Do packaging
 
 def get_file_directory_id(file_path):
@@ -61,6 +61,7 @@ def append_record_in_output_json(output_json, file_path, type, parent_id):
         record_dict["size"] = os.path.getsize(file_path)
     record_dict["modified_at"] = os.path.getmtime(file_path)
     record_dict["created_at"] = creation_date(file_path)
+    record_dict["file_path"] = file_path
     # Uncomment if need other details from os.stat
     # record_dict["stats"] = os.stat(file_path)
     output_json.append(record_dict)
@@ -78,7 +79,7 @@ def save_json_file(output_json__path, json_data):
 def main_func(input_path, output_json_path):
     """
     Main function of processing. Uses os walks to get the directory and file details and saves it to json file.
-    @param: input_path: Input root path whose directory and file details are rerquired.
+    @param: input_path: Input directory path whose child directory and file details are required.
     @param: output_json_path: Output JSON file path with name
     """
     try:
@@ -100,12 +101,11 @@ def main_func(input_path, output_json_path):
                 file_path = os.path.join(root,file)
                 output_json = append_record_in_output_json(output_json, file_path, "FILE", parent_id)
         # Processing completed
-        print("Processing is completed. Saving json file at location: ", output_json_path)
         save_json_file(output_json_path, output_json)
+        print("Processing is completed. Saved json file at location: ", output_json_path)
     except Exception as e:
         print("Some error occured: ", str(e))
 
-   
 if __name__ == "__main__":
     args = parser.parse_args()
     input_path = args.input_path
