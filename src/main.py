@@ -107,7 +107,9 @@ def main_func(input_path, output_json_path):
                 output_json = append_record_in_output_json(output_json, file_path, "FILE", parent_id)
         # Processing completed. Saving JSON file
         save_json_file(output_json_path, output_json)
+        print("Processing is completed. Total no.of records is: ", len(output_json))
         print("Processing is completed. Saved json file at location: ", output_json_path)
+
     except Exception as e:
         print("Some error occured: ", str(e))
         print(traceback.print_exc())
