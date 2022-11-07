@@ -47,9 +47,3 @@ optional arguments:
 
 ### Example of Run:
 `python src/main.py "C:/Users/user1/test" -o output.json`
-
-## To be checked and removed
-ERROR with belkow directory path- To be checked later
-
-E:\Data\E Drive\mob bckups\aj mobile\Lenevo\Removable Disk\AJ\songs\bolly\Once Upon A Time In Mumbaai (2010) ~190Kbps [www.DJMaza.Com]\Once Upon A Time In Mumbaai (2010) ~190Kbps-VBR (With Covers) [www.DJMaza.Com]
-E:\\Data\\E Drive\\mob bckups\\aj mobile\\Lenevo\\Removable Disk\\AJ\\songs\\remix\\Bolly Oldies Mix Vol.3 - Various Djs (2010) [www.DJMaza.Com]\\Bolly Oldies Mix Vol.3 - Various Djs (2010) [www.DJMaza.Com]\\01 - Dil Tod Ke Na Ja (Pyaar Ke Side Effects) [www.DJMaza.Com].mp3
